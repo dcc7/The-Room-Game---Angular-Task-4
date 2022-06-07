@@ -1,5 +1,7 @@
 .background {
     background-image: url("../images/bath 2.svg");
+    position: fixed;
+    z-index: -1;
     background-position: top center;
     background-repeat: no-repeat;
     background-color: #E1E1E1;
@@ -42,6 +44,8 @@
 /* If no key is present */
 .background-two {
     background-image: url("../images/door.svg");
+    position: fixed;
+    z-index: -1;
     background-position: top center;
     background-repeat: no-repeat;
     background-color: #C2D4FF;

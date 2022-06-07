@@ -1,7 +1,7 @@
 .indicator {
     position: absolute;
-    left: 40px;
-    top: -50px;
+    left: 25px;
+    top: 90px;
     width: 350px;
     height: 20px;
     background-image: linear-gradient(to right, blue, red);
