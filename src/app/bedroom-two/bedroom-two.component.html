@@ -1,0 +1,11 @@
+<div *ngIf="keyPresent">
+    <div class="background"></div>
+    <div class="floor"></div>
+    <button *ngIf="buttonCheck" #buttonKey (click)="alert()" class="key"></button>
+    <app-indicator *ngIf="buttonCheck" class="indicator-comp" [mouseCoordinates]="indicatorInformation"></app-indicator>
+</div>
+
+<div *ngIf="!keyPresent">
+    <div class="background-two"></div>
+    <div class="floor"></div>
+</div>

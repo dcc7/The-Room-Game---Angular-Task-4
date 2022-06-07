@@ -1,0 +1,52 @@
+.background {
+    background-image: url("../images/bath 1.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #E1E1E1;
+    width: 100vw;
+    height: 1242px;
+    /* border: 1px solid black; */
+}
+
+.floor {
+    position: fixed;
+    top: 869px;
+    left: 0;
+    background-image: linear-gradient(grey, white);
+    width: 100vw;
+    height: 371px;
+}
+
+.key {
+    position: absolute;
+    top: 771px;
+    left: 1300px;
+    background-image: url("../images/key.svg");
+    background-position: center;
+    background-size: 50px;
+    width: 49px;
+    height: 49px;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.key:hover {
+    opacity: 1;
+}
+
+.indicator-comp {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+/* If no key is present */
+.background-two {
+    background-image: url("../images/door.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #E5A7BC;
+    width: 100vw;
+    height: 1242px;
+    /* border: 1px solid black; */
+}

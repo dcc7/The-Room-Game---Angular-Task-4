@@ -1,0 +1,17 @@
+/* remove margins from bootstrap container */
+
+.container, .row {
+    margin: 0;
+    margin-left: -6px;
+}
+
+.comp-container {
+    position: absolute;
+    padding: 0;
+}
+
+.minimap-comp {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}

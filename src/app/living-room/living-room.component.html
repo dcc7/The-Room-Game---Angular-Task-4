@@ -1,0 +1,4 @@
+<div class="background"></div>
+<div class="floor"></div>
+<button *ngIf="buttonCheck" #buttonKey (click)="alert()" class="key"></button>
+<app-indicator *ngIf="buttonCheck" class="indicator-comp" [mouseCoordinates]="indicatorInformation"></app-indicator>
