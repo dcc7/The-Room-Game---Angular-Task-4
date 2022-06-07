@@ -9,7 +9,7 @@ export class IndicatorComponent implements OnInit, DoCheck, AfterViewInit {
 
   @Input() mouseCoordinates: any;
   @ViewChild('bar', {static: false}) bar?: ElementRef; 
-  viewInitialised = false;
+  viewInitialised: boolean = false;
 
   constructor( private renderer: Renderer2 ) {}
 

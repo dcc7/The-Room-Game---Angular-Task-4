@@ -10,7 +10,7 @@ import { MessagesService } from '../messages.service';
 export class LivingRoomComponent implements OnInit {
 
   @ViewChild('buttonKey') buttonKey: ElementRef
-  buttonCheck: any;
+  buttonCheck: boolean;
   keyCoordinates = {x: 1125, y: 724};
   indicatorInformation: {xDiff?: any, yDiff?: any} = {xDiff: 0, yDiff: 0};
   playAgain: boolean = false;

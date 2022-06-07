@@ -13,7 +13,7 @@ export class BedroomOneComponent implements OnInit {
   keyCoordinates = {x: 363, y: 795};
   indicatorInformation: {xDiff?: any, yDiff?: any} = {xDiff: 0, yDiff: 0};
   keyPresent: boolean = false;
-  buttonCheck: any;
+  buttonCheck: boolean;
 
   constructor(
     private keysService: KeysService,
