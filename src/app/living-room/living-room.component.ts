@@ -14,6 +14,7 @@ export class LivingRoomComponent implements OnInit {
   buttonCheck: any;
   keyCoordinates = {x: 1125, y: 724};
   indicatorInformation: {xDiff?: any, yDiff?: any} = {xDiff: 0, yDiff: 0};
+  playAgain: boolean = false;
 
   constructor(
     private keysService: KeysService,
@@ -40,6 +41,13 @@ export class LivingRoomComponent implements OnInit {
     const mouseCoorindates = {x: e.clientX, y: e.clientY};
     this.indicatorInformation.xDiff = Math.abs(mouseCoorindates.x - this.keyCoordinates.x);
     this.indicatorInformation.yDiff = Math.abs(mouseCoorindates.y - this.keyCoordinates.y);
+
+    if (this.keysService.keys.length === 5){
+      this.playAgain = true;
+    }
   }
 
+  resetGame() {
+    location.reload();
+  }
 }

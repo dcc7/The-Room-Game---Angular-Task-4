@@ -1,4 +1,10 @@
-<div class="background"></div>
+<div class="background">
+    <div *ngIf="playAgain" class="play-again">
+        <h2>Would you like to play again?</h2>
+        <br>
+        <button class="btn btn-danger" (click)="resetGame()">Reset Game</button>
+    </div>
+</div>
 <div class="floor"></div>
 <button *ngIf="buttonCheck" #buttonKey (click)="alert()" class="key"></button>
 <app-indicator *ngIf="buttonCheck" class="indicator-comp" [mouseCoordinates]="indicatorInformation"></app-indicator>
