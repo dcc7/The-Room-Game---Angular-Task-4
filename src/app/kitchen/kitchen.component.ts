@@ -10,11 +10,9 @@ import { MessagesService } from '../messages.service';
 })
 export class KitchenComponent implements OnInit {
 
+  @ViewChild('buttonKey') buttonKey: ElementRef;
   keyCoordinates = {x: 425, y: 394};
   indicatorInformation: {xDiff?: any, yDiff?: any} = {xDiff: 0, yDiff: 0};
-
-  @ViewChild('buttonKey') buttonKey: ElementRef;
-
   keyPresent: boolean = false;
   buttonCheck: boolean;
 
@@ -33,12 +31,9 @@ export class KitchenComponent implements OnInit {
     alert(this.messagesService.randomMessage());
     this.buttonKey.nativeElement.remove();
     this.buttonCheck = false;
-
     const index = this.keysService.rooms.indexOf('kitchen');
     this.keysService.rooms.splice(index, 1);
-
     this.keysService.keys.push('bedroom-two');
-    // this.router.navigate(['/bedroom-one']);
   }
 
   keyCheck() {
@@ -49,7 +44,6 @@ export class KitchenComponent implements OnInit {
     }
   }
 
-  //Mouse detection
   @HostListener('document:mousemove', ['$event']) 
   onMouseMove(e) {
     const mouseCoorindates = {x: e.clientX, y: e.clientY};

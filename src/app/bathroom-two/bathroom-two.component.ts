@@ -1,7 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { KeysService } from '../keys.service';
-import { MessagesService } from '../messages.service';
 
 @Component({
   selector: 'app-bathroom-two',
@@ -11,16 +10,13 @@ import { MessagesService } from '../messages.service';
 export class BathroomTwoComponent implements OnInit {
 
   @ViewChild('buttonKey') buttonKey: ElementRef;
-
   keyCoordinates = {x: 420, y: 652};
   indicatorInformation: {xDiff?: any, yDiff?: any} = {xDiff: 0, yDiff: 0};
-
   keyPresent: boolean = false;
   buttonCheck: boolean;
 
   constructor(
     private keysService: KeysService,
-    private messagesService: MessagesService,
     private router: Router,
     ) { }
 
@@ -33,10 +29,8 @@ export class BathroomTwoComponent implements OnInit {
     alert('Congratulations, you have finished the game!');
     this.buttonKey.nativeElement.remove();
     this.buttonCheck = false;
-
     const index = this.keysService.rooms.indexOf('bathroom-two');
     this.keysService.rooms.splice(index, 1);
-    // this.keysService.keys.push('');
     this.router.navigate(['/']);
   }
 
@@ -48,7 +42,6 @@ export class BathroomTwoComponent implements OnInit {
     }
   }
 
-  //Mouse detection
   @HostListener('document:mousemove', ['$event']) 
   onMouseMove(e) {
     const mouseCoorindates = {x: e.clientX, y: e.clientY};

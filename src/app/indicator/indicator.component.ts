@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, DoCheck, ElementRef, Input, OnChanges, OnInit, Renderer2, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, DoCheck, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-indicator',
@@ -21,13 +21,11 @@ export class IndicatorComponent implements OnInit, DoCheck, AfterViewInit {
 
   ngDoCheck(): void {
     if (this.viewInitialised){
-
       if (this.mouseCoordinates.xDiff > 250 && 
       this.mouseCoordinates.yDiff > 250
       ) {
         this.renderer.setStyle(this.bar.nativeElement, 'left', '-2px');
       }
-
       if (this.mouseCoordinates.xDiff <= 250 && 
           this.mouseCoordinates.yDiff <= 250 &&
           this.mouseCoordinates.xDiff > 150 && 
@@ -35,7 +33,6 @@ export class IndicatorComponent implements OnInit, DoCheck, AfterViewInit {
           ) {
         this.renderer.setStyle(this.bar.nativeElement, 'left', '130px');
       }
-
       if (this.mouseCoordinates.xDiff <= 150 && 
           this.mouseCoordinates.yDiff <= 250 &&
           this.mouseCoordinates.xDiff > 100 && 
@@ -43,13 +40,10 @@ export class IndicatorComponent implements OnInit, DoCheck, AfterViewInit {
           ) {
         this.renderer.setStyle(this.bar.nativeElement, 'left', '220px');
       }
-
       if (this.mouseCoordinates.xDiff <= 100 && this.mouseCoordinates.yDiff <= 100
           ) {
         this.renderer.setStyle(this.bar.nativeElement, 'left', '330px');
       }
-
     }
   }
-
 }

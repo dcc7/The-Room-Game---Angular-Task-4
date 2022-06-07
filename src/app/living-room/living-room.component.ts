@@ -1,5 +1,4 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import { KeysService } from '../keys.service';
 import { MessagesService } from '../messages.service';
 
@@ -29,13 +28,11 @@ export class LivingRoomComponent implements OnInit {
     alert(this.messagesService.randomMessage());
     this.buttonKey.nativeElement.remove();
     this.buttonCheck = false;
-
     const index = this.keysService.rooms.indexOf('living');
     this.keysService.rooms.splice(index, 1);
     this.keysService.keys.push('bedroom-one');
   }
 
-  //Mouse detection
   @HostListener('document:mousemove', ['$event']) 
   onMouseMove(e) {
     const mouseCoorindates = {x: e.clientX, y: e.clientY};

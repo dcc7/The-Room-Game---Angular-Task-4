@@ -1,5 +1,3 @@
-/* remove margins from bootstrap container */
-
 .container, .row {
     margin: 0;
     margin-left: -6px;

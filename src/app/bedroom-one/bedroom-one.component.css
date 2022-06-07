@@ -5,7 +5,6 @@
     background-color: #E1E1E1;
     width: 100vw;
     height: 1242px;
-    /* border: 1px solid black; */
 }
 
 .floor {
@@ -14,7 +13,7 @@
     left: 0;
     background-image: linear-gradient(grey, white);
     width: 100vw;
-    height: 371px;
+    height: 373px;
 }
 
 .key {
@@ -40,7 +39,6 @@
     bottom: 20px;
 }
 
-
 /* If no key is present */
 .background-two {
     background-image: url("../images/door.svg");
@@ -49,5 +47,4 @@
     background-color: #AE6A8F;
     width: 100vw;
     height: 1242px;
-    /* border: 1px solid black; */
 }
