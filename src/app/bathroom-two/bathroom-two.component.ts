@@ -29,6 +29,7 @@ export class BathroomTwoComponent implements OnInit {
     alert('Congratulations, you have finished the game!');
     this.buttonKey.nativeElement.remove();
     this.buttonCheck = false;
+    this.keysService.keys.push('bathroom-two');
     const index = this.keysService.rooms.indexOf('bathroom-two');
     this.keysService.rooms.splice(index, 1);
     this.router.navigate(['/']);

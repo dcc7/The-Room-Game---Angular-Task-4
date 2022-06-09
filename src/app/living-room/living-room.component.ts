@@ -39,7 +39,7 @@ export class LivingRoomComponent implements OnInit {
     this.indicatorInformation.xDiff = Math.abs(mouseCoorindates.x - this.keyCoordinates.x);
     this.indicatorInformation.yDiff = Math.abs(mouseCoorindates.y - this.keyCoordinates.y);
 
-    if (this.keysService.keys.length === 5){
+    if (this.keysService.keys.length === 6){
       this.playAgain = true;
     }
   }

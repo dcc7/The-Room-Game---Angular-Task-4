@@ -1,5 +1,4 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import { KeysService } from '../keys.service';
 import { MessagesService } from '../messages.service';
 
@@ -19,7 +18,6 @@ export class KitchenComponent implements OnInit {
   constructor(
     private keysService: KeysService,
     private messagesService: MessagesService,
-    private router: Router,
     ) { }
 
   ngOnInit(): void {
